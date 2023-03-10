@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
  
 const app = express();
 
-mongoose.connect("mongodb+srv://Chibueze:wX4X4ZawYfPLiQA@example.g8nly0a.mongodb.net/diarydb?retryWrites=true&w=majority").then(()=>{
+mongoose.connect(process.env.mongourl).then(()=>{
     console.log("connected");
 }).catch(()=>{
     console.log("Failed to connect");
